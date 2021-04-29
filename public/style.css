@@ -1,0 +1,296 @@
+body {
+   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+   background-color: rgb(255, 255, 255);
+}
+* {
+   box-sizing: border-box;
+}
+ 
+ .note{
+	 font-weight: bold;
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  font-style:italic;
+  text-align:left;
+  padding-left:100px;
+ }
+
+.col1{
+	color: white;
+   float: left;
+   width: 30%;
+   height: 100%;
+   padding: 10px;
+   text-align: center;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+	
+}
+.col3{
+	color: white;
+   float: left;
+   width: 35%;
+   height: 70%;
+   padding: 10px;
+   text-align: center;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+	/*background-color: green;*/
+	
+}
+.col2 {
+   color: white;
+   float: right;
+   width: 35%;
+   height: 100%;
+   padding: 10px;
+   text-align: center;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container1{
+  max-width: 5000px;
+  max-height: 5000px;
+  width: 90%;
+  height: 100%;
+  background-color: white;
+  padding: 30px 30px 30px 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  /*margin-left:5em*/
+  transform: translate(0, 25%);/*align vertically center*/
+}
+.container3{
+  max-width: 5000px;
+  max-height: 5000px;
+  width: 90%;
+  height: 100%;
+  background-color: white;
+  padding: 30px 30px 30px 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  /*margin-left:5em*/
+}
+
+.container2{
+  max-width: 5000px;
+  max-height: 5000px;
+  width: 90%;
+  height: 100%;
+  background-color: white;
+  padding: 30px 30px 30px 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+
+.centered1 {
+  border-radius: 8px;
+   color: white;
+   float: right;
+   width: 100%;
+   height: 100%;
+   padding: 10px;
+   background-color: #111;
+   text-align: center;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(153, 29, 224);
+  background: linear-gradient(135deg, #de6262, #ffb88c);/*background: linear-gradient(135deg, #71b7e6, #9b59b6);linear-gradient(135deg, #71b7e6, #9b59b6);*/
+   
+}
+.centered3 {
+  border-radius: 8px;
+   color: white;
+   float: right;
+   width: 100%;
+   height: 100%;
+   padding: 10px;
+   background-color: #111;
+   text-align: center;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(153, 29, 224);
+  background: linear-gradient(135deg, #ffb88c, #71b7e6);/*background: linear-gradient(135deg, #71b7e6, #9b59b6);linear-gradient(135deg, #71b7e6, #9b59b6);*/
+   
+}
+.centered2 {
+  border-radius: 8px;
+   color: white;
+   float: left;
+   width: 100%;
+   height: 100%;
+   padding: 10px;
+   background-color: #111;
+   text-align: center;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(153, 29, 224);
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+   
+}
+
+
+.colContainer{
+	background: linear-gradient(deg, #71b7e6, #9b59b6);
+}
+@media screen and (max-width: 1000px) {
+   .col1 {
+      width: 25%;
+   }
+   .col1 {
+      width: 35%;
+   }
+   .col2 {
+      width: 35%;
+   }
+}
+@media screen and (max-width: 1000px) {
+   .col1 {
+      width: 100%;
+   }
+   .col3 {
+      width: 100%;
+   }
+   .col2 {
+      width: 100%;
+   }
+   .container1{
+	   width:100%;
+     transform: translate(0, 0);
+   }
+   .container2{
+	   width:100%;
+   }
+   .changefont{
+	   font-size: 3.2vw;
+   }
+    
+	 .note{
+	  font-size: 15px;
+	  padding-left:10px;
+	 }
+}
+
+h1 {
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  font-size: 45px;
+  font-style:italic;
+}
+
+h3{
+	font-weight: bold;
+	text-align: center;
+	font-size: 25px;
+	font-weight: 500;
+	position: relative;
+}
+
+p {
+  max-width: 900px;
+}
+
+
+
+form .input-box{
+  margin-bottom: 15px;
+  width: 100%;/*input-box width*/
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 0px;
+  transition: all 0.3s ease;
+}
+form span.details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+label{
+	display: block;
+  line-height:1em;
+}
+
+.input-box{
+  height: 30px;
+  width: 100%;
+  
+}
+
+form label{
+	text-align: left;
+}
+body{
+	height:100%;
+	background: linear-gradient(135deg, #de6262, #ffb88c , #71b7e6, #9b59b6);
+}
+
+form .button1{
+   height: 45px;
+   margin: 35px 0
+ }
+ form .button1 input{
+   height: 100%;
+   width: 100%;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   line-height:2em;
+   transition: all 0.3s ease;
+   background: linear-gradient(135deg,  #ffb88c, #de6262);
+ }
+
+ form .button3{
+   height: 45px;
+   margin: 35px 0
+ }
+ form .button3 input{
+   height: 100%;
+   width: 100%;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background: linear-gradient(135deg, #fc8f8f, #ca85e6);
+ }
+ 
+ form .button2{
+   height: 45px;
+   margin: 35px 0
+ }
+ form .button2 input{
+   height: 100%;
+   width: 100%;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background: linear-gradient(135deg, #9b59b6, #71b7e6);
+ }
+.heading{
+  line-height:0em;
+}

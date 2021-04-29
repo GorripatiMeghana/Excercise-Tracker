@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="total">
+	<h1>Excercise Tracker</h1>
+	<div class="colContainer">
+	  
+		<div class="col1" id="xxx" >
+		  <div class="container1">
+			<div class="centered1">
+			  <form action="/api/users" method="post">
+				<span class="heading"><h3>Create a New User</h3>
+				<p><code>POST /api/users</code></p></span>
+					<label>User Name
+					<input class="input-box" id="uname" type="text" name="username" placeholder="Enter Username" required></label>
+					<div class="button1"><input type="submit" value="Submit"></div>
+			  </form>
+			</div>
+		  </div>
+	    </div>
+		<div class="col3" id="xxx" >
+		  <div class="container3">
+			<div class="centered3">
+			  <form id="fromtolimit" method="post">
+				<span class="heading"><h3>Retrieve Data</h3>
+				<p><code>POST /api/:_id/logs/from/to/limit</code></p></span>
+          <label>User Id		<input class="input-box" id="fromuserid" type="text" name="fromuserid" placeholder="Enter :_id" required></label>
+					<label>From Date
+					<input class="input-box" id="from" type="text" name="from" placeholder="Enter date (yyyy-mm-dd)" ></label>
+          <label>To Date
+					<input class="input-box" id="to" type="text" name="to" placeholder="Enter date (yyyy-mm-dd)" ></label>
+          <label>Limit
+					<input class="input-box" id="limit" type="text" name="limit" placeholder="Enter Limit Number" ></label>
+					<div class="button3"><input type="submit" value="Submit"></div>
+			  </form>
+			</div>
+		  </div>
+	    </div>
+		<div class="col2" >
+		  <div class="container2">
+			<div class="centered2">
+				<form id="exercise-form" method="post">
+				  <span class="heading"><h3>Add Exercises</h3>
+				  <p><code class="changefont">POST /api/users/:_id/exercises</code></p></span>
+						  <label>User Id		<input class="input-box" id="uid" type="text" name=":_id" placeholder="Enter :_id" required></label>
+						  <label>Description		<input class="input-box" id="desc" type="text" name="description" placeholder="Enter description" required></label>
+						  <label>Duration		<input class="input-box" id="dur" type="text" name="duration" placeholder="Enter duration (mins.)" required></label>
+						  <label>Date		<input class="input-box" id="dat" type="text" name="date" placeholder="Enter date (yyyy-mm-dd)"></label>
+					  
+					<div class="button2"><input type="submit" value="Submit"></div>
+				</form>
+			</div>
+		</div>
+	</div>
+	</div>
+	<p class="note">
+        <strong>GET user's exercise log: </strong>
+        <code class="changefont">GET /api/users/:_id/logs?[&amp;from][&amp;to][&amp;limit]</code>
+      </p>
+      <p class="note"><strong>[ ]</strong> = optional</p>
+      <p class="note"><strong>from, to</strong> = dates (yyyy-mm-dd); <strong>limit</strong> = number</p>
+</div>
+<script>
+      const exerciseForm = document.getElementById("exercise-form");
+
+      exerciseForm.addEventListener("submit", () => {
+        const userId = document.getElementById("uid").value;
+        exerciseForm.action = `/api/users/${userId}/exercises`;
+
+        exerciseForm.submit();
+      });
+      const fromToLimitForm = document.getElementById("fromtolimit");
+
+      fromToLimitForm.addEventListener("submit", () => {
+        const userId = document.getElementById("fromuserid").value;
+        fromToLimitForm.action = `/api/users/${userId}/logs`;
+
+        fromToLimitForm.submit();
+      });
+    </script>
+</body>
+</html>
