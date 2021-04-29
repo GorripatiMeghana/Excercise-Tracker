@@ -17,13 +17,11 @@ mongoose.set('useFindAndModify', false);
 
 app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }));
-//app.use(express.static('public'))
+app.use(express.static('public'))
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/views/index.html')
 });
 
-const path = require('path')
-app.use(express.static(path.join(__dirname, 'public')));//For css file to work
 const listener = app.listen(process.env.PORT || 3000, () => {
   console.log('Your app is listening on port ' + listener.address().port)
 })
